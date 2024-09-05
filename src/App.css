@@ -121,6 +121,7 @@ i {
   width: 24.9%;
   height: 30rem;
   margin: 10px;
+  border-radius: 5px;
   background: #d3cd96;
   color: #184579;
   display: flex;
@@ -242,10 +243,12 @@ i {
 .task4 .main {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .task4 .post {
   background: #d3cd96;
+  border-radius: 5px;
   color: #184579;
   margin: 15px 5px;
   padding: 10px;
@@ -274,9 +277,12 @@ i {
 .task5 .main {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
+
 .task5 .post {
   background: #d3cd96;
+  border-radius: 5px;
   color: #184579;
   margin: 15px 5px;
   padding: 10px;
@@ -295,7 +301,7 @@ i {
 }
 
 @media screen and (max-width: 600px) {
-  .task4 .main {
+  .task5 .main {
     flex-direction: column;
   }
 }
