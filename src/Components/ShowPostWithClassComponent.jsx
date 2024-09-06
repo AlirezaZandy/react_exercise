@@ -1,4 +1,6 @@
 import { PureComponent } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser,faDna,faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 let postList = [
   {
@@ -30,9 +32,9 @@ let postList = [
 function MyPost({ props }) {
   return (
     <div className="post">
-      <div className="name"><i className="icon">@</i>{props.name}</div>
-      <div className="bio"><i className="icon">@</i>{props.bio}</div>
-      <div className="job"><i className="icon">@</i>{props.job}</div>
+      <div className="name"><FontAwesomeIcon icon={faUser} className="icon"/>{props.name}</div>
+      <div className="bio"><FontAwesomeIcon icon={faDna} className="icon"/>{props.bio}</div>
+      <div className="job"><FontAwesomeIcon icon={faBriefcase} className="icon"/>{props.job}</div>
     </div>
   );
 }

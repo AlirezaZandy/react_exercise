@@ -1,4 +1,7 @@
 import { PureComponent } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
+
 let posts = [
   {
     id: 1,
@@ -84,33 +87,25 @@ class PostWithComment extends PureComponent {
     return (
       <div className="container task3">
         <div className="head">
-          <h1>Change post using componentDidUpdate</h1>
+          <h1>Show post with comment</h1>
           <div className="underline"></div>
         </div>
         <div className="main">
           <div className="nav">
             <button className="navitem" onClick={this.handleClick} id="0">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faCircleArrowDown} className="icon" />
               Butterfly
             </button>
             <button className="navitem" onClick={this.handleClick} id="1">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faCircleArrowDown} className="icon" />
               Beach
             </button>
             <button className="navitem" onClick={this.handleClick} id="2">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faCircleArrowDown} className="icon" />
               Flower
             </button>
             <button className="navitem" onClick={this.handleClick} id="3">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faCircleArrowDown} className="icon" />
               Eagle
             </button>
           </div>

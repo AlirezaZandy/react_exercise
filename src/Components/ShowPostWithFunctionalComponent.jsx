@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faDna, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 let postList = [
   {
@@ -30,24 +32,33 @@ let postList = [
 function MyPost({ props }) {
   return (
     <div className="post">
-      <div className="name"><i className="icon">@</i>{props.name}</div>
-      <div className="bio"><i className="icon">@</i>{props.bio}</div>
-      <div className="job"><i className="icon">@</i>{props.job}</div>
+      <div className="name">
+        <FontAwesomeIcon icon={faUser} className="icon" />
+        {props.name}
+      </div>
+      <div className="bio">
+        <FontAwesomeIcon icon={faDna} className="icon" />
+        {props.bio}
+      </div>
+      <div className="job">
+        <FontAwesomeIcon icon={faBriefcase} className="icon" />
+        {props.job}
+      </div>
     </div>
   );
 }
 
 function FuncComp() {
-    const [state, setState] = useState({ posts: postList });
-  const postsren = state.posts.map((p, i) => <MyPost props={p} key={i}/>);
+  const [state, setState] = useState({ posts: postList });
+  const postsren = state.posts.map((p, i) => <MyPost props={p} key={i} />);
   return (
-      <div className="container task4">
-        <div className="head">
-          <h1>Show posts with functional component</h1>
-          <div className="underline"></div>
-        </div>
-        <div className="main">{postsren}</div>
+    <div className="container task4">
+      <div className="head">
+        <h1>Show posts with functional component</h1>
+        <div className="underline"></div>
       </div>
+      <div className="main">{postsren}</div>
+    </div>
   );
 }
 export default FuncComp;

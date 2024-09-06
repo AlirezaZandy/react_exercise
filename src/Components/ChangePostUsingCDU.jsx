@@ -1,4 +1,6 @@
 import { PureComponent } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 
 let posts = [
   {
@@ -47,13 +49,13 @@ class ExerciseCDU extends PureComponent {
     super(props);
     this.state = { id: "3" };
     this.handleClick = this.handleClick.bind(this);
-    this.posts = posts
+    this.posts = posts;
   }
 
   handleClick(e) {
     this.setState({
-        id: e.target.id
-    })
+      id: e.target.id,
+    });
   }
 
   render() {
@@ -66,27 +68,19 @@ class ExerciseCDU extends PureComponent {
         <div className="main">
           <div className="nav">
             <button className="navitem" onClick={this.handleClick} id="0">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faFileLines} className="icon" />
               Butterfly
             </button>
             <button className="navitem" onClick={this.handleClick} id="1">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faFileLines} className="icon" />
               Beach
             </button>
             <button className="navitem" onClick={this.handleClick} id="2">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faFileLines} className="icon" />
               Flower
             </button>
             <button className="navitem" onClick={this.handleClick} id="3">
-              <i id="icon" className="">
-                @
-              </i>
+              <FontAwesomeIcon icon={faFileLines} className="icon" />
               Eagle
             </button>
           </div>
@@ -100,4 +94,4 @@ class ExerciseCDU extends PureComponent {
     );
   }
 }
-export default ExerciseCDU
+export default ExerciseCDU;
