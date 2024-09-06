@@ -10,6 +10,10 @@ i {
   padding: 0px 5px;
 }
 /* components */
+i {
+  pointer-events: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -47,6 +51,7 @@ i {
   align-items: center;
   justify-content: center;
   margin: 30px;
+  height: 80vh;
 }
 
 .task1 .navitem {
@@ -100,6 +105,7 @@ i {
     align-items: center;
     justify-content: center;
     width: 60%;
+    height: auto;
   }
   .task1 .navitem {
     margin: 2px;
@@ -150,7 +156,12 @@ i {
     width: 90%;
   }
 }
-
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
 /* loader */
 .loader {
   width: 50px;
@@ -180,7 +191,7 @@ i {
 }
 .task3 .nav {
   display: flex;
-  width: 90%;
+  width: 81vw;
   align-items: center;
   justify-items: center;
   justify-content: space-between;
